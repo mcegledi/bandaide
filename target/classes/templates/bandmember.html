@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="de" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="#{bandmember.list.title}">Bandmitglieder</title>
+</head>
+<body>
+
+    <div class="userlist" th:text="#{bandmember.list.title}">Bandmitglieder</div>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Instrument</th>
+        </tr>
+        <tr th:each="person: ${allPersons}">
+            <td th:text="${person.name}">Foo</td>
+            <td th:text="${person.instrument}">Bar</td>
+        </tr>
+    </table>
+
+    <a href="/users/add" th:text="#{bandmember.list.add}">Bandmitglied addieren</a>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="de" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="#{basescale.title}">Basescale</title>
+</head>
+<body>
+
+    <div th:text="${note.representation}"></div>
+    <div th:text="${note}"></div>
+
+    <div th:each="note: ${T(com.guergen.scaletrainer.tonicandscales.Note).values()}" th:text="${note}"></div>
+</body>
+</html>
